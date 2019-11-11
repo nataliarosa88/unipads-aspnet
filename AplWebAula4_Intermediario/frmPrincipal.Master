@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="frmPrincipal.master.cs" Inherits="AplWebAula4_Intermediario.frmPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+
+        <title></title>
+        <link href="App_Themes/CSS/cssEstilos.css" rel="stylesheet" />
+               <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script language="javascript" type="text/javascript">
+            function Validar() {
+                PageMethods.Validacao();
+                return false;
+            }
+        </script>
+ 
+               <link href="Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+        <script src="Scripts/bootstrap.min.js"></script>
+ 
+    </head>
+    <body>
+      <div class="container">
+
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Cadastros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="Default.aspx">Imóveis</a>
+                      <div class="dropdown-divider"></div>
+                      <asp:Label ID="lblMenu" runat="server"></asp:Label>
+                    </div>
+                  </li>
+                    </ul>
+              </div>
+            </nav>
+
+
+
+          <header class="blog-header py-3">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <div class="col-12 text-center"><div class="jumbotron"><h3>Sistema Imobiliária</h3></div></div>
+                </div>
+            </header>
+            <form id="form1" runat="server">
+                <div class="form-group row">
+                    <asp:ImageButton ID="ImageButton1" runat="server" CssClass="align_img" ImageUrl="~/Imagens/Botoes/btnConsultar.png" onclick="btnConsultar_Click" />
+                    <asp:ImageButton ID="ImageButton5" runat="server" CssClass="align_img" ImageUrl="~/Imagens/Botoes/btnLimpar.png" onclick="btnLimpar_Click" />
+                    <asp:ImageButton ID="btnCadastrar" runat="server" CssClass="align_img" ImageUrl="~/Imagens/Botoes/btnCadastrar.png" onclick="btnCadastrar_Click" />
+                    <asp:ImageButton ID="btnAlterar" runat="server" CssClass="align_img" ImageUrl="~/Imagens/Botoes/btnAlterar.png" onclick="btnAlterar_Click" />
+                    <asp:ImageButton ID="btnExcluir" runat="server" CssClass="align_img" ImageUrl="~/Imagens/Botoes/btnExcluir.png" onclick="btnExcluir_Click" />
+                 </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                     <div class="form-group">         
+                        <div class="alert alert-secondary" role="alert">
+                            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group row">                
+                            <asp:Label class="col-sm-2 col-form-label" runat="server" Text="Código:"></asp:Label>
+                            <div class="col-sm-10">
+                                <asp:TextBox class="form-control" ID="txtCodigo" runat="server" required="true"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group row">     
+                            <asp:Label  class="col-sm-2 col-form-label" runat="server" Text="Endereço:"></asp:Label>
+                            <div class="col-sm-10">
+                                <asp:TextBox class="form-control" ID="txtEndereco" runat="server" ></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group row">     
+                            <asp:Label class="col-sm-2 col-form-label" ID="Label3" runat="server" Text="Cidade:"></asp:Label>
+                            <div class="col-sm-10">
+                                <asp:TextBox class="form-control" ID="txtCidade" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group row">     
+                            <asp:Label class="col-sm-2 col-form-label" ID="Label4" runat="server" Text="Estado:"></asp:Label>
+                            <div class="col-sm-10">
+                                <asp:TextBox class="form-control" ID="txtEstado" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
+                    </div>
+                </asp:ContentPlaceHolder>
+                <asp:GridView ID="GridView2" runat="server"  OnPreRender="GridView_PreRender" CssClass="table table-striped"></asp:GridView>  
+                </form>
+       </div>
+    <script src="Scripts/jquery.dataTables.min.js"></script>
+    <script src="Scripts/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%= GridView2.ClientID %>').dataTable({
+                "aLengthMenu": [[10, 50, 75, -1], [10, 50, 75, "All"]],
+                "iDisplayLength": 10,
+                "order": [[2, "asc"]],
+                stateSave: true,
+                stateSaveCallback: function (settings, data) {
+                    localStorage.setItem
+                      ('DataTables_' + settings.sInstance, JSON.stringify(data));
+                },
+                stateLoadCallback: function (settings) {
+                    return JSON.parse
+                     (localStorage.getItem('DataTables_' + settings.sInstance));
+                }
+            });
+        });
+    </script>
+
+            <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    </body>
+</html>
