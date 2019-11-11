@@ -92,6 +92,7 @@
     <Content Include="Imagens\Botoes\btnLimpar.png" />
     <Content Include="Imagens\Botoes\btnVazio.png" />
     <Content Include="Imagens\btnTitulo.png" />
+    <Content Include="Menu.html" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
