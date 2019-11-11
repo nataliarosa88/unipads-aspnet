@@ -38,8 +38,8 @@ namespace AplWebAula4_Intermediario
                             if (npgDados.HasRows)
                             {
                                 npgDados.Read();
-                        Session["s_username"] = npgDados["nome"].ToString();
-                        Response.Redirect("Principal.aspx");
+                                Session["s_username"] = npgDados["nome"].ToString();
+                                Response.Redirect("Principal.aspx");
                             }
                             else
                             {

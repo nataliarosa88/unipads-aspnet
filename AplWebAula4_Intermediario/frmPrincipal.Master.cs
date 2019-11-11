@@ -28,6 +28,9 @@ namespace AplWebAula4_Intermediario
                 if (lblMenu.Text == "admin")
                 {
                     lblMenu.Text = "<a class='dropdown-item' href='Usuario.aspx'>Usuários</a>";
+                } else
+                {
+                    lblMenu.Text = "";
                 }
 
                 npgConexao = new NpgsqlConnection("Server=andretecnologia.com.br;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;");
