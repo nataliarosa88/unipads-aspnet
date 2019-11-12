@@ -148,6 +148,8 @@ namespace AplWebAula4_Intermediario
                     lblMensagem.Text = "Registro incluído com sucesso !!!";
 
                     if (!npgDados.IsClosed) { npgDados.Close(); }
+
+                    Response.Redirect("Principal.aspx");
                 }
                 else
                 {
@@ -192,6 +194,8 @@ namespace AplWebAula4_Intermediario
                     npgCmd.CommandText = strSql;
                     npgCmd.ExecuteNonQuery();
                     lblMensagem.Text = "Registro alterado com sucesso !!!";
+
+                    Response.Redirect("Principal.aspx");
                 }
                 else
                 {
