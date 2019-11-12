@@ -30,7 +30,7 @@ namespace AplWebAula4_Intermediario
 
                         try
                         {
-                            String sql = "select * from usuario where nome = '" + txtUsername.Text + "'";
+                            String sql = "select * from usuario where nome = '" + txtUsername.Text + "' and senha ='" + txtPassword.Text + "'"  ;
                             NpgsqlCommand npgCmd = new NpgsqlCommand();
                             npgCmd.Connection = npgConexao;
                             npgCmd.CommandText = sql;
@@ -63,7 +63,7 @@ namespace AplWebAula4_Intermediario
 
             {
 
-                lblMessage.Text = "Please make sure that the username and the password is Correct";
+                lblMessage.Text = "Verifique se todos os campos estão preenchidos";
 
             }
         }
