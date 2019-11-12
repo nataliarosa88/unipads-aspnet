@@ -89,6 +89,12 @@
                                 <asp:TextBox class="form-control" ID="txtTelefone" runat="server"></asp:TextBox>
                             </div>
                         </div>
+                        <div class="form-group row">     
+                            <asp:Label class="col-sm-2 col-form-label" ID="Label1" runat="server" Text="Senha:"></asp:Label>
+                            <div class="col-sm-10">
+                                <asp:TextBox class="form-control" ID="txtSenha" runat="server"></asp:TextBox>
+                            </div>
+                        </div>
                     </div>
                 </asp:ContentPlaceHolder>
                 <asp:GridView ID="GridView" runat="server"  OnPreRender="GridView_PreRender" CssClass="table table-striped"></asp:GridView>  

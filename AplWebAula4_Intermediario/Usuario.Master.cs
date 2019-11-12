@@ -65,6 +65,7 @@ namespace AplWebAula4_Intermediario
             txtNome.Text = "";
             txtEmail.Text = "";
             txtTelefone.Text = "";
+            txtSenha.Text = "";
             lblMensagem3.Text = "";
             txtCodigo.Focus();
         }
@@ -85,6 +86,7 @@ namespace AplWebAula4_Intermediario
                     txtNome.Text = npgDados["nome"].ToString();
                     txtEmail.Text = npgDados["email"].ToString();
                     txtTelefone.Text = npgDados["telefone"].ToString();
+                    txtSenha.Text = npgDados["senha"].ToString();
                 }
                 else
                 {
@@ -124,11 +126,12 @@ namespace AplWebAula4_Intermediario
                 {
                     if (!npgDados.IsClosed) { npgDados.Close(); }
 
-                    strSql = "Insert into usuario (id,nome,email,telefone) values (";
+                    strSql = "Insert into usuario (id,nome,email,telefone,senha) values (";
                     strSql += txtCodigo.Text + ",";
                     strSql += "'" + txtNome.Text + "',";
                     strSql += "'" + txtEmail.Text + "',";
-                    strSql += "'" + txtTelefone.Text + "')";
+                    strSql += "'" + txtTelefone.Text + "',";
+                    strSql += "'" + txtSenha.Text + "')";
                     npgCmd.Connection = npgConexao;
                     npgCmd.CommandText = strSql;
                     npgCmd.ExecuteNonQuery();
@@ -173,6 +176,7 @@ namespace AplWebAula4_Intermediario
                     strSql = "Update usuario set ";
                     strSql += "nome = '" + txtNome.Text + "',";
                     strSql += "email = '" + txtEmail.Text + "',";
+                    strSql += "email = '" + txtSenha.Text + "',";
                     strSql += "telefone = '" + txtTelefone.Text + "' ";
                     strSql += "Where id = " + txtCodigo.Text;
                     npgCmd.Connection = npgConexao;
