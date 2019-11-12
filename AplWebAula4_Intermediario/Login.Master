@@ -67,7 +67,7 @@
                                 <asp:TextBox class="form-control" TextMode="Password" ID="txtPassword" runat="server" ></asp:TextBox>
                             </div>
                         </div>
-                     <asp:Button ID="Button1" runat="server" class="btn btn-default" Text="Login" onclick="btnlogin_Click" Width="158px" />
+                     <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-sm" Text="Login" onclick="btnlogin_Click" />
                     </div>
                 </asp:ContentPlaceHolder>
                 </form>
