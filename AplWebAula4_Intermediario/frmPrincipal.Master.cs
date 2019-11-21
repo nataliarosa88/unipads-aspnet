@@ -32,8 +32,8 @@ namespace AplWebAula4_Intermediario
                 {
                     lblMenu.Text = "";
                 }
-                npgConexao = new NpgsqlConnection("Server=andretecnologia.com.br;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;Timeout=60;");
-                //npgConexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;Timeout=60;");
+                //npgConexao = new NpgsqlConnection("Server=206.189.65.199;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;Timeout=60;");
+                npgConexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=imobiliaria;Timeout=60;");
                 npgConexao.Open();
 
                 npgCmd.CommandText = "Select * from imoveis";
